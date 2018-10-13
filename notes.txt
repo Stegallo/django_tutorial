@@ -1,0 +1,6 @@
+docker run -it -v $(pwd):/django_tutorial/ -p 8000:8000 django /bin/bash
+
+cd /django_tutorial/
+django-admin startproject mysite
+cd mysite
+python manage.py runserver 0.0.0.0:8000
