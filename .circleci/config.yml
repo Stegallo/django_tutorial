@@ -36,7 +36,9 @@ jobs:
 
       - run:
           name: deploy
-          command: python3 deploy_with_scheduler.py
+          command: |
+            . venv/bin/activate
+            python3 deploy_with_scheduler.py
 
       - save_cache:
           paths:
