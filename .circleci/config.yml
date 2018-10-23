@@ -29,6 +29,13 @@ jobs:
 
       - run:
           name: install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+
+      - run:
+          name: deploy
           command: python3 deploy_with_scheduler.py
 
       - save_cache:
