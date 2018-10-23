@@ -2,9 +2,11 @@ import requests
 import json
 from datetime import datetime, timedelta
 import time
-my_domain = $my_domain
-username = $username
-token = $token
+import os
+
+my_domain = os.environ['my_domain']
+username = os.environ['username']
+token = os.environ['token']
 
 def main():
     """
